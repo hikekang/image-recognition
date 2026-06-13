@@ -1,0 +1,21 @@
+{
+  "name": "image-recognition",
+  "version": "2.0.0",
+  "description": "图片识别工具 - 支持本地分析和 Claude Vision API",
+  "main": "analyze.js",
+  "scripts": {
+    "local": "node analyze.js",
+    "local:list": "node analyze.js --list",
+    "local:batch": "node analyze.js --batch",
+    "local:ocr": "node analyze.js --ocr",
+    "api": "node recognize.js",
+    "api:list": "node recognize.js --list",
+    "api:batch": "node recognize.js --batch"
+  },
+  "keywords": ["image", "recognition", "ocr", "analysis", "local"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.1"
+  }
+}
