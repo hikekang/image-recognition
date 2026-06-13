@@ -1,6 +1,6 @@
 # 📸 Image Recognition Tool
 
-一款强大的图片识别工具，支持本地OCR识别和Claude Vision API，可完全离线运行。
+一款基于Tesseract OCR的本地图片识别工具，支持中英文识别，可完全离线运行。
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org)
@@ -27,7 +27,7 @@
 - ✅ **完全免费** - 无需API Key，完全本地运行
 - ✅ **隐私安全** - 数据不离开你的电脑
 - ✅ **多种安装选项** - 一键安装脚本
-- ✅ **API集成** - 支持Claude Vision API（可选）
+- ✅ **中英文支持** - 支持中文和英文混合识别
 
 ---
 
@@ -103,9 +103,6 @@ node analyze.js --batch F:\photos
 npm run local F:\图片.png
 npm run local:ocr F:\图片.png
 npm run local:batch F:\photos
-
-# API分析（需要API Key）
-npm run api F:\图片.png
 ```
 
 ---
@@ -170,8 +167,7 @@ ocr.cmd <图片路径>                # 快速OCR识别
 
 ```
 image-recognition/
-├── analyze.js           # 本地分析主程序
-├── recognize.js         # API分析程序
+├── analyze.js           # 本地分析主程序（核心）
 ├── package.json         # 项目配置
 ├── quick-install.bat    # 快速安装脚本
 ├── install-ocr.bat      # 完整安装脚本
@@ -224,31 +220,6 @@ Set-ExecutionPolicy RemoteSigned
 
 ---
 
-## 🌐 API 集成（可选）
-
-支持集成 Claude Vision API 进行高级图片分析：
-
-```bash
-# 设置环境变量
-set ANTHROPIC_API_KEY=your_api_key_here
-
-# 使用API分析
-npm run api F:\图片.png
-```
-
----
-
-## 📊 性能指标
-
-| 指标 | 本地OCR | API分析 |
-|------|---------|---------|
-| 速度 | ⚡ 快 | 🔄 中等 |
-| 准确率 | 📊 高 | 📈 更高 |
-| 离线支持 | ✅ 是 | ❌ 否 |
-| 成本 | 💰 免费 | 💵 按量计费 |
-
----
-
 ## 🤝 贡献指南
 
 欢迎贡献！请查看以下步骤：
@@ -275,7 +246,6 @@ npm run api F:\图片.png
 
 - [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) - OCR引擎
 - [Node.js](https://nodejs.org) - 运行环境
-- [Anthropic Claude](https://claude.ai) - Vision API
 
 ---
 
