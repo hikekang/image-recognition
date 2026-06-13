@@ -14,8 +14,7 @@
 - **图片元数据读取** - 文件大小、格式、尺寸、修改时间
 - **OCR 文字识别** - 支持中英文混合识别，准确率高
 - **批量处理** - 一次处理整个目录的图片
-- **Windows OCR** - 使用系统内置OCR引擎（无需安装）
-- **Tesseract OCR** - 高精度离线识别（推荐）
+- **Tesseract OCR** - 高精度离线识别
 
 ### 📋 支持格式
 - PNG (.png)
@@ -95,9 +94,6 @@ node analyze.js --ocr F:\图片.png
 
 # 批量处理
 node analyze.js --batch F:\photos
-
-# Windows OCR方案
-node windows-ocr.js F:\图片.png
 ```
 
 ### 方法3：使用npm脚本
@@ -176,7 +172,6 @@ ocr.cmd <图片路径>                # 快速OCR识别
 image-recognition/
 ├── analyze.js           # 本地分析主程序
 ├── recognize.js         # API分析程序
-├── windows-ocr.js       # Windows OCR方案
 ├── package.json         # 项目配置
 ├── quick-install.bat    # 快速安装脚本
 ├── install-ocr.bat      # 完整安装脚本
